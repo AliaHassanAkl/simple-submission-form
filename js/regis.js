@@ -14,10 +14,11 @@ var submitbtn= document.getElementById('submit');
 // } console.log(lawyerInfo);
 
 var lawyerInfo={
-    fullName: inputFullName.value ,
-    address: inputAdress.value,
-    phoneNumber: inputPhoneNum.value,
+    Name: inputFullName.value ,
+    phone: inputPhoneNum.value,
+    // address: inputAdress.value,
     email: inputEmail.value,
+    password: inputPassword.value,
     userName: inputUserName.value,
 
 };
@@ -30,7 +31,7 @@ submitbtn.onclick= function(){
 
 }
 // POST request using fetch()
-fetch("https://jsonplaceholder.typicode.com/posts", {    
+fetch("https://localhost:7176/api/Companies", {    
     // Adding method type
     method: "POST",  
     // Adding body or contents to send
